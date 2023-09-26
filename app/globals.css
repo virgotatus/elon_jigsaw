@@ -18,10 +18,12 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding: 1rem;
+}
+
+@layer base {
+  h1 {
+    @apply mb-3 font-bold;
+    font-size: 2rem;
+  }
 }
