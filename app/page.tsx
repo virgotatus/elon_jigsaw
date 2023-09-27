@@ -1,4 +1,4 @@
-import MePage from "./me";
+import MePage from "./components/me";
 
 export default function Home() {
   return (
