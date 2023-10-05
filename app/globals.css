@@ -26,4 +26,7 @@ body {
     @apply mb-3 font-bold;
     font-size: 2rem;
   }
+  a {
+    @apply underline;
+  }
 }

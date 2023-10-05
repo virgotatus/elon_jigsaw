@@ -11,14 +11,20 @@ export interface MetaTag {
 }
 
 interface Props {
+  key: string;
   children: MetaTag;
 }
 
 export function wxImgUrl(url: string) {
-  return url.replace("?wx_fmt=jpeg", "");
+  return url.replace("?wx_fmt=jpeg", "/export");
 }
 
 const ArticleCard = ({ children }: Props) => {
+  // 替换 \\x0d\\x0a 为换行符
+  const processed_description = children.description
+    .replace(/\\x0d\\x0a/g, "\n")
+    .replace(/\\x26#39;/g, "'");
+
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
@@ -31,7 +37,7 @@ const ArticleCard = ({ children }: Props) => {
           <div className="underline">{children.title}</div>
           <div className="badge badge-secondary">{children.author}</div>
         </Link>
-        <p>{children.description}</p>
+        <p>{processed_description}</p>
       </div>
     </div>
   );

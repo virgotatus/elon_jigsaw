@@ -7,7 +7,7 @@ const ArticlesZone = async () => {
   return (
     <div className="grid grid-cols-2 gap-4">
       {articles.map((article: MetaTag) => (
-        <ArticleCard>{article}</ArticleCard>
+        <ArticleCard key={article.link}>{article}</ArticleCard>
       ))}
     </div>
   );
