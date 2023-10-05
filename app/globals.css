@@ -26,6 +26,14 @@ body {
     @apply mb-3 font-bold;
     font-size: 2rem;
   }
+  h2 {
+    @apply mb-3 font-bold;
+    font-size: 1.5rem;
+  }
+  h3 {
+    @apply mb-3 font-bold;
+    font-size: 1rem;
+  }
   a {
     @apply underline;
   }
