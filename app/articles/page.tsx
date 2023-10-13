@@ -4,7 +4,7 @@ import ArticlesZone from "./ArticlesZone";
 const ArticlesPage = () => {
   return (
     <div>
-{/*       <ArticlesZone /> */}
+      <ArticlesZone />
     </div>
   );
 };
