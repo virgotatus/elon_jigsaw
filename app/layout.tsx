@@ -1,10 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lobster, Noto_Sans } from "next/font/google";
 import NavBar from "./components/NavBar";
 import Bot from "./components/Bot";
 
-const inter = Inter({ subsets: ["latin"] });
+const lobser = Noto_Sans({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "Elon's jigsaw",
@@ -22,7 +22,7 @@ export default function RootLayout({
         <meta name="renderer" content="webkit" />
         <meta name="referrer" content="no-referrer" />
       </head>
-      <body className={inter.className}>
+      <body className={lobser.className}>
         <NavBar />
         <main>{children}</main>
         <Bot />
